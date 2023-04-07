@@ -25,3 +25,4 @@ export default WeatherApp;
 
 // http://api.openweathermap.org/geo/1.0/direct?q=London,GB&appid=2c3ee268b3aa4d17a19ce1491eee794f&units=metric
 
+// 2c3ee268b3aa4d17a19ce1491eee794f

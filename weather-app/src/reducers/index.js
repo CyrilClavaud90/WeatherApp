@@ -1,8 +1,9 @@
-import { CHANGE_VALUE } from "../actions";
+import { CHANGE_VALUE, SAVE_WEATHER_WITH_CITY_NAME } from "../actions";
 
 const initialState = {
     formValue: '',
-    Location: {},
+    city: {},
+
 };
 
 function reducer(state = initialState, action = {}) {
@@ -11,6 +12,13 @@ function reducer(state = initialState, action = {}) {
             return {
                 ...state,
                 formValue: action.value,
+            }
+
+        case SAVE_WEATHER_WITH_CITY_NAME:
+            return {
+                ...state,
+                formValue: '',
+                city: action.data,
             }
 
         default:
