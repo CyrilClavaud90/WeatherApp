@@ -1,0 +1,48 @@
+#search {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    height: 2.5rem;
+    width: 20rem;
+    border: none;
+}
+
+input::placeholder {
+    padding-left: 1rem;
+}
+
+button {
+    height: 2.5rem;
+    padding-left: 0.8rem;
+    border: none;
+    background-color: lightgray;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+img {
+    height: 2rem;
+}
+
+#temperatureUnits {
+    display: flex;    
+}
+
+.unit {
+    all: initial;
+    padding: 0 0.5rem;
+}
+
+.unit:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,6 @@
+#capitalCities {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
