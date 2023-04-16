@@ -1,30 +1,73 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchWeatherWithCityName } from "../../actions";
+import { currentDate } from "../../selectors";
 
 import './index.css';
 import Form from '../Form';
-import View from "../View";
+import CurrentWeither from "../CurrentWeither";
+import DailyWeather from "../DailyWeather";
 
 function WeatherApp() {
+  const dispatch = useDispatch();
+  const fetchAPI = useSelector((state) => state.fetchAPI);
+
+  // A l'init de l'app, fetch les données de Paris
+  useEffect(() => {
+    dispatch(fetchWeatherWithCityName("paris"));
+  }, []);
+
+  const handleClickOnButton = ((event) => {
+    dispatch(fetchWeatherWithCityName(event.currentTarget.textContent));
+    console.log(event.currentTarget.textContent);
+  });
+
   return (
-    <div className="WeatherApp">
+    <div id="WeatherApp">
 
-      <header>
-        <ul id="capitalCities">
-          <li className="capitalCity">Paris</li>
-          <li className="capitalCity">Rome</li>
-          <li className="capitalCity">Séoul</li>
-          <li className="capitalCity">Tokyo</li>
-        </ul>
-      </header>
+        <h1>MY WEATHER APP</h1>
+        <p id="date">{currentDate()}</p>
+      <section id="top">
+        <aside>
+          <ul id="capitalCities">
+            <li className="capitalCity" onClick={handleClickOnButton}>Berlin</li>
+            <li className="capitalCity" onClick={handleClickOnButton}>Jakarta</li>
+            <li className="capitalCity" onClick={handleClickOnButton}>Londres</li>
+            <li className="capitalCity" onClick={handleClickOnButton}>Madrid</li>
+            <li className="capitalCity" onClick={handleClickOnButton}>Paris</li>
+            <li className="capitalCity" onClick={handleClickOnButton}>Rome</li>
+            <li className="capitalCity" onClick={handleClickOnButton}>Séoul</li>
+            <li className="capitalCity" onClick={handleClickOnButton}>Tokyo</li>
+            <li className="capitalCity" onClick={handleClickOnButton}>Washington</li>
+          </ul>
+        </aside>
 
-      <Form />
+        {
+          fetchAPI
+          &&
+          (
+            <div>
+              <Form />
+            
+              <CurrentWeither />
+            </div>
+          )
+        }
+      </section>
 
-      <View />
+      {
+        fetchAPI
+        &&
+        (
+          <section id="bottom">
+            <DailyWeather />
+          </section>
+
+        )
+      }
 
     </div>
   );
 }
 
 export default WeatherApp;
-
-// 2c3ee268b3aa4d17a19ce1491eee794f

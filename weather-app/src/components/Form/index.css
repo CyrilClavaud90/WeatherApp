@@ -1,7 +1,9 @@
 #search {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: baseline;
+    border-bottom: solid 1.5px #fff;
+    padding-bottom: 2rem;
 }
 
 form {
@@ -17,13 +19,14 @@ input {
 
 input::placeholder {
     padding-left: 1rem;
+    font-size: 1rem;
 }
 
 button {
     height: 2.5rem;
     padding-left: 0.8rem;
     border: none;
-    background-color: lightgray;
+    background-color: transparent;
 }
 
 button:hover {
@@ -31,16 +34,20 @@ button:hover {
 }
 
 img {
-    height: 2rem;
+    height: 1.6rem;
 }
 
 #temperatureUnits {
-    display: flex;    
+    display: flex;
+    color: #fff;
+    font-weight: bold;
 }
 
 .unit {
     all: initial;
     padding: 0 0.5rem;
+    font-size: 1.3rem;
+    color: #fff;
 }
 
 .unit:hover {

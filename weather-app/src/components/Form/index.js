@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changeTemperatureUnit, changeValue, fetchWeatherWithCityName } from "../../actions";
+import { changeTemperatureUnit, changeValue, fetchWeatherWithCityName, fetchWeatherWithLastCityName } from "../../actions";
 
 import "./index.css";
 import loupe from "../../assets/search-white.png";
@@ -9,7 +9,7 @@ function Form() {
     const dispatch = useDispatch();
     const value = useSelector((state) => state.formValue);
 
-    // Au changement de l'input
+    // Composant controllé de l'input
     const handleChange = (event) => {
         dispatch(changeValue(event.currentTarget.value));
     };
@@ -22,8 +22,9 @@ function Form() {
 
     // Au changement de l'unité de température
     const handleTemperatureUnit = ((event) => {
-        dispatch(changeTemperatureUnit(event.currentTarget.name));
-    })
+        dispatch(changeTemperatureUnit(event.currentTarget.name, event.currentTarget.textContent));
+        dispatch(fetchWeatherWithLastCityName());
+    });
 
     return (
         <div id="search">
