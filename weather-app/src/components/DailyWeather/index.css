@@ -1,0 +1,40 @@
+#dailyWeather {
+    color: #fff;
+}
+
+#dailyTitle {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    /* border-bottom: #fff solid 1px; */
+}
+
+.dailyView {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dailyCard {
+    width: 20%;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.dailyMain {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.dailyTime,
+.dailyTemperature {
+    margin: 0.2rem;
+}
+
+.dailyIcon {
+    height: 3.5rem;
+}
