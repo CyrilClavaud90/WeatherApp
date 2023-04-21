@@ -18,7 +18,7 @@ function DailyWeather() {
                     secondFetchAPI
                     &&
                     list.list.filter(day => day.dt_txt.substr(0, 10) !== list.list[0].dt_txt.substr(0, 10)).slice(2, 7).map((item) => (
-                        <div className="dailyCard">
+                        <div className="dailyCard" key={item.dt}>
                             <p className="dailyMain">{item.weather[0].main}</p>
                             <p className="dailyTime">{formatTime(item.dt)}</p>
                             <img src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="weather" className="dailyIcon" />
@@ -33,7 +33,7 @@ function DailyWeather() {
                     secondFetchAPI
                     &&
                     list.list.filter(day => day.dt_txt.substr(0, 10) !== list.list[0].dt_txt.substr(0, 10)).slice(10, 15).map((item) => (
-                        <div className="dailyCard">
+                        <div className="dailyCard" key={item.dt}>
                             <p className="dailyMain">{item.weather[0].main}</p>
                             <p className="dailyTime">{formatTime(item.dt)}</p>
                             <img src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="weather" className="dailyIcon" />

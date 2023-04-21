@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchWeatherWithCityName } from "../../actions";
 import { currentDate } from "../../selectors";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import './index.css';
 import Form from '../Form';
@@ -65,6 +67,8 @@ function WeatherApp() {
 
         )
       }
+
+      <ToastContainer />
 
     </div>
   );
