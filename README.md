@@ -13,3 +13,5 @@ La ville par défaut est paris. On peut faire une recherche en utilisant la barr
 A droite de l'input se trouve les différentes unitées de température disponible (Fahrenheit, Celsius, et Kelvin).
 
 Pour le développement de ce projet, j'ai utilisé l'API gratuite OpenWeather : https://openweathermap.org/.
+
+Lien vers l'application : https://cyrilclavaud90.github.io/WeatherApp/
