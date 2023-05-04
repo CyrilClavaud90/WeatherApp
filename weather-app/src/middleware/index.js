@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FETCH_DAILY_WEATHER_WITH_CITY_COORDINATE, FETCH_WEATHER_WITH_CITY_NAME, FETCH_WEATHER_WITH_LAST_CITY_NAME, errorCallAPI, fetchDailyWeatherWithCityCoordinate, saveDailyWeatherWithCityCoordinate, saveWeatherWithCityName, saveWeatherWithLastCityName } from "../actions";
+import { FETCH_DAILY_WEATHER_WITH_CITY_COORDINATE, FETCH_WEATHER_WITH_CITY_NAME, errorCallAPI, fetchDailyWeatherWithCityCoordinate, saveDailyWeatherWithCityCoordinate, saveWeatherWithCityName } from "../actions";
 import { toast } from "react-toastify";
 
 const api = (store) => (next) => (action) => {
@@ -26,20 +26,6 @@ const api = (store) => (next) => (action) => {
                         theme: "light",
                         });
                   });
-        }
-
-        case FETCH_WEATHER_WITH_LAST_CITY_NAME: {
-            const { lastFormValue } = store.getState();
-            
-            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${lastFormValue}&appid=${apiKey}${temperatureUnit}`)
-                .then((response) => {
-                    store.dispatch(saveWeatherWithLastCityName(response.data));
-                    store.dispatch(fetchDailyWeatherWithCityCoordinate(response.data.coord));
-                })
-                // .catch((error) => {
-                //     console.log(error);
-                //     store.dispatch(errorCallAPI());
-                //   });
         }
 
         case FETCH_DAILY_WEATHER_WITH_CITY_COORDINATE: {

@@ -20,23 +20,10 @@ export const fetchWeatherWithCityName = (cityName) => ({
   cityName,
 });
 
-// Save call API d'après le nom d'une ville
+// Save call API d'après le nom d'une ville pour la météo actuelle
 export const SAVE_WEATHER_WITH_CITY_NAME = 'SAVE_WEATHER_WITH_CITY_NAME';
 export const saveWeatherWithCityName = (data) => ({
   type: SAVE_WEATHER_WITH_CITY_NAME,
-  data,
-});
-
-// Call API avec le dernier nom d'une ville pour la météo actuelle
-export const FETCH_WEATHER_WITH_LAST_CITY_NAME = 'FETCH_WEATHER_WITH_LAST_CITY_NAME';
-export const fetchWeatherWithLastCityName = () => ({
-  type: FETCH_WEATHER_WITH_LAST_CITY_NAME,
-});
-
-// Save call API d'après le nom d'une ville
-export const SAVE_WEATHER_WITH_LAST_CITY_NAME = 'SAVE_WEATHER_WITH_LAST_CITY_NAME';
-export const saveWeatherWithLastCityName = (data) => ({
-  type: SAVE_WEATHER_WITH_LAST_CITY_NAME,
   data,
 });
 

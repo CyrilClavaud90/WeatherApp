@@ -21,7 +21,6 @@ function WeatherApp() {
 
   const handleClickOnButton = ((event) => {
     dispatch(fetchWeatherWithCityName(event.currentTarget.textContent));
-    console.log(event.currentTarget.textContent);
   });
 
   return (

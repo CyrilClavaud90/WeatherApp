@@ -6,7 +6,6 @@ import { currentTime, formatTime, roundToOneDecimal } from "../../selectors";
 function CurrentWeither() {
     const unit = useSelector((state) => state.temperature.temperatureymbol)
     const data = useSelector((state) => state.city);
-    // console.log(data);
 
     return (
         <div id="viewData">
