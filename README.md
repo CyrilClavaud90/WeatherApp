@@ -2,7 +2,7 @@
 
 ## Aperçu du projet
 
-![image](./src/assets/aper%C3%A7u.png)
+![image](./weather-app//src/assets/aper%C3%A7u.png)
 
 ## Présentation
 
