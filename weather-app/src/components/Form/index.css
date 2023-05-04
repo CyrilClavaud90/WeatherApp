@@ -1,0 +1,55 @@
+#search {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: solid 1.5px #fff;
+    padding-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    height: 2.5rem;
+    width: 20rem;
+    border: none;
+}
+
+input::placeholder {
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+button {
+    height: 2.5rem;
+    padding-left: 0.8rem;
+    border: none;
+    background-color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+img {
+    height: 1.6rem;
+}
+
+#temperatureUnits {
+    display: flex;
+    color: #fff;
+    font-weight: bold;
+}
+
+.unit {
+    all: initial;
+    padding: 0 0.5rem;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.unit:hover {
+    cursor: pointer;
+}

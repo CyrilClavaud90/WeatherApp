@@ -8,7 +8,6 @@ import { Provider } from 'react-redux';
 // ====== Import local ======
 import store from './store';
 import WeatherApp from './components/WeatherApp';
-import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
